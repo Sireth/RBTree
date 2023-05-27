@@ -95,7 +95,7 @@ RBTree<T>::drawTree(Node<T> *node, int x, int y, int radius, int SCREEN_WIDTH) {
 
 template<typename T>
 void RBTree<T>::drawNode(Node<T> *node, int x, int y, int radius) {
-    TTF_Font *gFont = TTF_OpenFont("arial.ttf", radius);
+    TTF_Font *gFont = TTF_OpenFont("../arial.ttf", radius);
 
     SDL_Rect rect = {x - radius, y - radius, radius * 2, radius * 2};
 
