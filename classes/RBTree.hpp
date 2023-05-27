@@ -112,7 +112,12 @@ void RBTree<T>::drawNode(Node<T> *node, int x, int y, int radius) {
 
     SDL_Color textColor = {175, 175, 175};
     std::string dataString = std::to_string(node->data);
+    if(gFont == nullptr){
+        std::cout << "Font do not exists!" << std::endl;
+        return;
+    }
     SDL_Surface *textSurface = TTF_RenderText_Solid(gFont, dataString.c_str(), textColor);
+
     SDL_Texture *texture = SDL_CreateTextureFromSurface(m_renderer, textSurface);
     int textWidth = textSurface->w;
     int textHeight = textSurface->h;
