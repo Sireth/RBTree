@@ -7,9 +7,14 @@
 
 # How to use
 
+Init submodules
+
+```shell
+git submodule init
+git submodule update
+```
 
 Build project with Cmake
-
 ```shell
 mkdir "build"
 cd build
